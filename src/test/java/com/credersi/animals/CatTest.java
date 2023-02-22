@@ -21,6 +21,15 @@ public class CatTest {
 		assertEquals(cat.howHungry(), 80);
 	}
 	
+	
+	
+	@Test
+	public void testCatWillJump() {
+		Cat cat = new Cat();
+		cat.willJump();
+		assertEquals(cat.howHungry(), 60);
+	}
+	
 	@Test
 	public void testCatDead() {
 		Cat cat = new Cat();

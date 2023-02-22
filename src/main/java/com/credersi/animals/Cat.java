@@ -4,6 +4,7 @@ public class Cat {
 	private boolean alive;
 	private int hunger;
 	private int lives;
+	protected int jumps;
 	
 	private void dies() {
 		this.lives--;
@@ -44,6 +45,15 @@ public class Cat {
 	}
 	
 	public boolean isAlive() {
+		return this.alive;
+	}
+	
+	public boolean willJump() {
+		this.hunger += 10;
+		if (this.hunger >= 100) {
+			this.dies();
+		}
+		
 		return this.alive;
 	}
 }
